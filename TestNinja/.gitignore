@@ -1,4 +1,5 @@
 .vs
-TestNinja/bin/Debug
-TestNinja/obj/Debug
+TestNinja/bin
+TestNinja/obj
 packages
+.DS_Store
