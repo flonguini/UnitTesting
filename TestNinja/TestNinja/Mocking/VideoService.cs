@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
 
 namespace TestNinja.Mocking
 {
@@ -11,7 +10,7 @@ namespace TestNinja.Mocking
     {
         public string ReadVideoTitle()
         {
-            var str = File.ReadAllText("video.txt");
+            var str = new FileReader().Read("video.txt");
             var video = JsonConvert.DeserializeObject<Video>(str);
             if (video == null)
                 return "Error parsing the video.";
